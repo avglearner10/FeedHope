@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeedHope</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">🌱 FeedHope</h1>
+            <div class="nav-links">
+                <a href="#donate">Donate</a>
+                <a href="#available-food">Find Food</a>
+                <a href="#volunteer">Volunteer</a>
+                <button class="login-btn">Login</button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Share Food, Share Hope</h1>
+            <p>Connect surplus food with those who need it most</p>
+            <div class="hero-buttons">
+                <a href="#donate">
+                    <button class="primary-btn">I Want to Donate</button>
+                </a>
+                <a href="#available-food">
+                <button class="secondary-btn">I Need Food</button>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="donate" class="food-listing">
+            <h2>List Food for Donation</h2>
+            <div class="form-container">
+                <input type="text" id="foodName" placeholder="Food Item Name">
+                <input type="number" id="quantity" placeholder="Quantity (servings)">
+                <input type="date" id="expiryDate">
+                <input type="text" id="location" placeholder="Pickup Location">
+                <div class="image-upload">
+                    <label for="foodImage">📷 Add Food Image</label>
+                    <input type="file" id="foodImage" accept="image/*">
+                </div>
+                <button onclick="listFood()" class="submit-btn">List Food</button>
+            </div>
+        </section>
+
+        <section id="available-food" class="available-donations">
+            <h2>Available Food Donations</h2>
+            <div class="filter-bar">
+                <input type="text" placeholder="Search by location...">
+                <select>
+                    <option>All Categories</option>
+                    <option>Prepared Meals</option>
+                    <option>Groceries</option>
+                    <option>Fresh Produce</option>
+                </select>
+            </div>
+            <div id="foodList" class="food-grid"></div>
+        </section>
+
+        <section id="map-section" class="map-container">
+            <h2>Find Nearby Donations</h2>
+            <div id="map" class="map-placeholder">
+                Map Integration Coming Soon
+            </div>
+        </section>
+
+        <section class="impact-stats">
+            <h2>Our Impact</h2>
+            <div class="stats-container">
+                <div class="stat-card">
+                    <h3 id="totalDonations">0</h3>
+                    <p>Donations Made</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="foodSaved">0</h3>
+                    <p>Meals Saved</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="peopleHelped">0</h3>
+                    <p>People Helped</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="community">
+            <h2>Community Stories</h2>
+            <div class="stories-grid">
+                <div class="story-card">
+                    <img src="https://www.shutterstock.com/image-photo/compost-leftover-food-asian-young-260nw-2461759653.jpg" alt="Story 1">
+                    <h3>Essential facts about food waste</h3>
+                    <p><a target="_blank" href="https://altametrics.com/topics/essential-facts-about-food-waste-and-how-restaurants-can-combat-it/"> How restaurants can combat it...</a></p>
+                </div>
+                <div class="story-card">
+                    <img src="https://table2table.org/wp-content/uploads/2022/09/Lauren-Luerkens-1-21-22-route-1-1-300x271.jpg" alt="Story 2">
+                    <h3>Volunteer Spotlight</h3>
+                    <p><a target="_blank" href="https://www.civicchamps.com/post/the-future-of-good-food-rescue-hero-founder-leah-lizarondo">our dedicated food rescue heroes...</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: hello@foodshare.org</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#about">About Us</a>
+                <a href="#faq">FAQ</a>
+                <a href="#blog">Blog</a>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#">Twitter</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 FeedHope Connect. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
